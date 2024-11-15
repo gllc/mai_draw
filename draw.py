@@ -201,7 +201,7 @@ class CardDraw:
         title_text = self.title.name.name if len(self.title.name.name.encode()) <= 19 else self.title.name.name[:19]
         title_font = truetype(self.resm.get_fonts_path("MO-UDShinGoSCGb4-DeB.otf"), size=14)
         self.iframe.alpha_composite(ititle_frame, (32 + 102 + 7, 26 + 76))
-        self.ifd.text((32 + 102 + (276 - 10 - 14 * len(title_text) + 7 * len([i for i in title_text if len(i.encode()) == 1])) / 2, 26 + 86),
+        self.ifd.text((144 + (276 - 10 - 14 * len(title_text) + 7 * len([i for i in title_text if len(i.encode()) == 1])) / 2, 26 + 86),
                       title_text, fill=white, font=title_font, stroke_width=1, stroke_fill=black)
         # draw main chara
         main_chara = self.chara[0]
@@ -236,3 +236,6 @@ class CardDraw:
 
     def get_image(self) -> Image:
         return self.iframe
+
+
+
