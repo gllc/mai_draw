@@ -160,8 +160,8 @@ class CardDraw:
             clfb.alpha_composite(starSmail.resize((22, 22)), (11, 213))
         if uchara.awakening > 3:
             clfb.alpha_composite(starSmail.resize((22, 22)), (115, 213))
-        font_s = truetype(self.resm.get_fonts_path("GenSenMaruGothicTW-Heavy.ttf"), size=16)
-        font_l = truetype(self.resm.get_fonts_path("GenSenMaruGothicTW-Heavy.ttf"), size=25)
+        font_s = truetype(self.resm.get_fonts_path("FOT-RodinNTLGPro-EB.otf"), size=16)
+        font_l = truetype(self.resm.get_fonts_path("FOT-RodinNTLGPro-EB.otf"), size=25)
         mcd = Draw(clfb)
         mcd.text((25 + (60 - len(str(uchara.level)) * 15) / 2, 16), "LV", fill=(255, 255, 255, 255), font=font_s)
         mcd.text((55 + (80 - len(str(uchara.level)) * 18) / 2, 9), str(uchara.level), fill=(255, 255, 255, 255), font=font_l)
@@ -192,14 +192,14 @@ class CardDraw:
         # icon
         self.iframe.alpha_composite(self.resm.get_icon(self.icon).resize((102, 102)), (39, 33))
         # name
-        name_font = truetype(self.resm.get_fonts_path("GenSenMaruGothicTW-Regular.ttf"), size=20)
+        name_font = truetype(self.resm.get_fonts_path("MO-UDShinGoSCGb4-Reg.otf"), size=20)
         self.iframe.alpha_composite(iopen(self.resm.path / "name_frame.png"), (144, 66))
         for i, c in enumerate(self.name):
             self.ifd.text((32 + 102 + 23 + i * 20, 26 + 40 + 10), c, fill=black, font=name_font)
         # title
         ititle_frame = iopen(self.resm.need_path / "title" / f"UI_CMN_Shougou_{self.title.rareType.name}.png")
         title_text = self.title.name.name if len(self.title.name.name.encode()) <= 19 else self.title.name.name[:19]
-        title_font = truetype(self.resm.get_fonts_path("GenSenMaruGothicTW-Medium.ttf"), size=14)
+        title_font = truetype(self.resm.get_fonts_path("MO-UDShinGoSCGb4-DeB.otf"), size=14)
         self.iframe.alpha_composite(ititle_frame, (32 + 102 + 7, 26 + 76))
         self.ifd.text((32 + 102 + (276 - 10 - 14 * len(title_text) + 7 * len([i for i in title_text if len(i.encode()) == 1])) / 2, 26 + 86),
                       title_text, fill=white, font=title_font, stroke_width=1, stroke_fill=black)
@@ -209,8 +209,8 @@ class CardDraw:
         self.iframe.alpha_composite(ichara, (-46, 146))
         mclf = self.resm.get_chara_leve_frame(main_chara.characterId)
         # chara level
-        font_s = truetype(self.resm.get_fonts_path("GenSenMaruGothicTW-Heavy.ttf"), size=16)
-        font_l = truetype(self.resm.get_fonts_path("GenSenMaruGothicTW-Heavy.ttf"), size=25)
+        font_s = truetype(self.resm.get_fonts_path("FOT-RodinNTLGPro-EB.otf"), size=16)
+        font_l = truetype(self.resm.get_fonts_path("FOT-RodinNTLGPro-EB.otf"), size=24)
         mcd = Draw(mclf)
         mcd.text((21, 12), "LV", fill=(255, 255, 255, 255), font=font_s)
         mcd.text((53 + (100 - 8 - len(str(main_chara.level)) * 18) / 2, 9), str(main_chara.level), fill=(255, 255, 255, 255), font=font_l)

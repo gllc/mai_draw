@@ -10,10 +10,12 @@
 ### 安装
 
 克隆项目到本地；
+```git
+git clone https://github.com/gllc/mai_draw.git
+```
+通过[链接](https://1drv.ms/u/s!AoBHZVMZvJZscrX2KkyrMZUVlbc?e=IpRf1V)下载项目的资源文件，然后将压缩包中的`out`文件夹复制到项目根目录中；
 
-通过[链接](https://1drv.ms/u/s!AoBHZVMZvJZscVmqRoY5ecLbst8?e=PUHXwh)下载项目的资源文件，然后将压缩包中的`out`文件夹复制到项目根目录中；
-
-在项目根目录下运行以下命令安装所需的依赖：
+依赖安装：
 
 ```sh 
 pip install -r requirements.txt
@@ -49,5 +51,6 @@ if __name__ == '__main__':
 
 ![example.png](example.png)
 
-#### 致谢
-字体来源项目[Error063/maicard](https://github.com/Error063/maicard)
+#### 资源来源
+字体来源:群U
+<br>图片来源:舞萌DX
