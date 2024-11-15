@@ -1,11 +1,7 @@
 # welcome to MAIMAI!
 from enum import StrEnum
-from pathlib import Path
-from typing import Annotated, Any
 
-from pydantic import BaseModel, GetCoreSchemaHandler, GetJsonSchemaHandler
-from pydantic.json_schema import JsonSchemaValue
-from pydantic_core import core_schema
+from pydantic import BaseModel
 
 
 class StrEnumType(StrEnum):
