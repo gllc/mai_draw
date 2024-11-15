@@ -48,3 +48,6 @@ if __name__ == '__main__':
 #### 输出结果
 
 ![example.png](example.png)
+
+#### 致谢
+字体来源项目[Error063/maicard](https://github.com/Error063/maicard)
